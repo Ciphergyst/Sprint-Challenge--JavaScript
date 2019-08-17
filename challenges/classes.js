@@ -32,7 +32,7 @@ class cuboid extends CuboidMaker {
 
 }
 
-const newCuboid = new CuboidMaker(4, 5, 5);
+const newCuboid = new Cuboid(4, 5, 5);
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 // console.log(cuboid.volume()); // 100
