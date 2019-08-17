@@ -14,9 +14,7 @@ const dino1 = {
   "weight": "7000kg",
   "length": "12m",
   "period": "Late Cretaceous",
-  trexRoar: function() {
-  console.log("RAWERSRARARWERSARARARRRR!");
-  }
+
 };
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -53,7 +51,10 @@ console.log(dino1.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(trexRoar);
+dino1.roar = function () {
+  return "RAWERSRARARWERSARARARRRR!";
+};
+console.log(dino1.roar());
 
 
 // ==== Arrays ====
@@ -96,10 +97,8 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-for ( i = 0; i < graduates.length; i++) {
-  graduates[i].university;
-  if (university === Uni)
-  uni.push(graduates[i].university);
+for (let i = 0; i < graduates.length; i++) {
+  uni.push(graduates[i].university.match(/Uni/));
 }
 console.log(uni);
 
@@ -126,7 +125,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-zooAnimals.forEach(element => {
+zooAnimals.forEach(name => {
   animalNames.push(`names: ${element.animal_name}, scientific: ${element.scientific_name}`);
 });
 console.log(animalNames);
@@ -149,7 +148,7 @@ The zoos are concerned about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = zooAnimals.filter(zooAnimal => {
-  if(zooAnimal.population <= 5) {
+  if(zooAnimals.population <= 5) {
     return true;
   }
 });
@@ -160,8 +159,8 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce((population, zooAnimal, index, zooAnimals) => {
-  return population += zooAnimal.population;
+const populationTotal = zooAnimals.reduce((population, index, zooAnimals) => {
+  return population += zooAnimals.population;
 },0);
 console.log(populationTotal);
 
