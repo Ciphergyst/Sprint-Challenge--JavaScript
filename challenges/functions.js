@@ -10,9 +10,9 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-function consume(arg1, arg2, cb) {
+const consume = function(arg1, arg2, cb) {
   return cb(arg1, arg2);
-}
+};
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -20,15 +20,15 @@ function consume(arg1, arg2, cb) {
   * Create a function named multiply that returns the product of two numbers
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(x, y) {
+function add(x, y, cb) {
   return x + y;
 }
-console.log(add);
 
-function multiply(x, y) {
+
+function multiply(x, y, cb) {
   return x * y;
 }
-console.log(multiply);
+
 
 function greeting (firstName, lastName) {
   return `Hello ${firstName} ${lastName}, nice to meet you!,`;
