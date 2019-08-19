@@ -1,16 +1,17 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
 
 class CuboidMaker {
-  constructor(length, width, height) {
-    this.length = length;
-    this.width = width;
-    this.height = height;
+  constructor(atrributes) {
+    this.length = atrributes.length;
+    this.width = atrributes.width;
+    this.height = atrributes.height;
   }
 
 }
+console.log(CuboidMaker);
 
 
-class cuboid extends CuboidMaker {
+class cuboid1 extends CuboidMaker {
   constructor(volume) {
     super(volume);
   }
@@ -21,7 +22,7 @@ class cuboid extends CuboidMaker {
 }
 
 
-class cuboid1 extends CuboidMaker {
+class cuboid2 extends CuboidMaker {
   constructor(surfaceArea) {
   super(surfaceArea);
 }
@@ -32,14 +33,13 @@ class cuboid1 extends CuboidMaker {
 
 }
 // length: 4, width: 5, and height: 5 to cuboid.
-const newCuboid = new CuboidMaker ({
-  length: 4,
-  width: 5,
-  height: 5,
-});
+let newCub = new Cuboid(4, 5, 5);
+
+
+
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+console.log(CuboidMaker.volume()); // 100
+console.log(cuboidMaker.surfaceArea()); // 130
 
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
